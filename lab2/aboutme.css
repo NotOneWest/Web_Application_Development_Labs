@@ -54,12 +54,6 @@ table,th,td {
 ul {
   list-style-type: square;
 }
-/* img#right {
-  border: solid 1px black;
-  position: fixed;
-  top: 0;
-  right: 0;
-} */
 img#line, #line2, #line3{
   border: thick ridge #F7931E;
 }

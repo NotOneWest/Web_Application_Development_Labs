@@ -37,7 +37,7 @@ a:hover{
 strong {
   color: #FFF86B;
 }
-blockquote {
+blockquote,ol,ul {
   text-align: left;
 }
 q {

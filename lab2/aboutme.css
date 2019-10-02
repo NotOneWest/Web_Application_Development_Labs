@@ -2,6 +2,10 @@ body {
   font-family: helvetica, verdana, sans-serif;
   color: #939396;
   background-color: #1D2475;
+  background-image: url("cse326.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
 }
 h1 {
   display: inline-block;
@@ -43,18 +47,19 @@ blockquote,ol,ul {
 q {
   color: #D1DFEB;
 }
-table {
+table,th,td {
   border-style: dotted;
+  border-collapse: collapse;
 }
 ul {
   list-style-type: square;
 }
-img#right {
+/* img#right {
   border: solid 1px black;
   position: fixed;
   top: 0;
   right: 0;
-}
+} */
 img#line, #line2, #line3{
-  border: solid #F7931E;
+  border: thick ridge #F7931E;
 }

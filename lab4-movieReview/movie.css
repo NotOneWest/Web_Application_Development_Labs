@@ -26,7 +26,6 @@ h1 {
 }
 #overall-left {
   width: 550px;
-  margin-bottom: 125pt;
 }
 #left-top {
   background-image: url("rbg.png");
@@ -44,6 +43,7 @@ h1 {
   display: inline-block;
   margin-left: 2%;
   width: 47%;
+  height: 100%;
 }
 #review-q {
   background-color: #E8DC9B;
@@ -80,7 +80,10 @@ dt {
 footer{
   background-color: #A2B964;
   padding: 5px;
+  margin: 0px;
   text-align: center;
+  overflow: hidden;
+  width: 100%;
 }
 #valid {
   position: fixed;

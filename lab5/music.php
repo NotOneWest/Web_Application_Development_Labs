@@ -30,7 +30,7 @@
 			<ol>
 				<?php
 				$news_pages = 5;
-				if (isset($_GET["newspages"])) $news_pages = (int) $_GET["newspages"];
+				if(isset($_GET["newspages"])) $news_pages = (int) $_GET["newspages"];
 				$year=2019;
 				$month=11;
 				for($i = 0; $i < $news_pages; $i++) {
@@ -78,27 +78,44 @@
 			<h2>My Music and Playlists</h2>
 
 			<ul id="musiclist">
+				<?php
+				$songs = glob("lab5/musicPHP/songs/*.mp3");
+				$song_sizes = array();
+				foreach ($songs as $song) {
+					$song_sizes[$song] = filesize($song);
+				}
+				arsort($song_sizes);
+				foreach($song_sizes as $song => $song_size) {
+				?>
 				<li class="mp3item">
-					<a href="musicPHP/songs/paradise-city.mp3">paradise-city.mp3</a>
+					<a href="<?=$song?>"><?=basename($song)?></a>
+					(<?=(int) ($song_sizes[$song]/1024) ?> KB)
 				</li>
-
-				<li class="mp3item">
-					<a href="musicPHP/songs/basket-case.mp3">basket-case.mp3</a>
-				</li>
-
-				<li class="mp3item">
-					<a href="musicPHP/songs/all-the-small-things.mp3">all-the-small-things.mp3</a>
-				</li>
+			<?php } ?>
 
 				<!-- Exercise 8: Playlists (Files) -->
-				<li class="playlistitem">326-13f-mix.m3u:
+				<?php
+				 $playlists = glob("lab5/musicPHP/songs/*.m3u");
+				 arsort($playlists);
+				 foreach($playlists as $playlist) {
+				?>
+				<li class="playlistitem"><?=basename($playlist)?></li>
 					<ul>
-						<li>Basket Case.mp3</li>
-						<li>All the Small Things.mp3</li>
-						<li>Just the Way You Are.mp3</li>
-						<li>Pradise City.mp3</li>
-						<li>Dreams.mp3</li>
+						<?php
+						$contents = file($playlist);
+						$mp3s = array();
+						foreach($contents as $content) {
+							if(strpos($content, "#") === false){
+								array_push($mp3s, $content);
+							}
+						}
+						shuffle($mp3s);
+						foreach ($mp3s as $mp3) {
+						?>
+						<li><?=$mp3?></li>
+					<?php } ?>
 					</ul>
+				<?php } ?>
 			</ul>
 		</div>
 

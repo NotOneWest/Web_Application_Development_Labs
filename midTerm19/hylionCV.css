@@ -1,0 +1,121 @@
+/*
+	name : Hanseo Ahn
+	student id : 2018044775
+*/
+@font-face {
+  font-family: HYUMyriad;
+  src: url("font/MyriadHYU.otf");
+}
+body{
+  font-family: HYUMyriad;
+  color: #939396;
+  background-color: black;
+}
+#page{
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90vh;
+  min-height: 550px;
+  margin-top: 30px;
+  background-color: #3F3D42;
+}
+nav{
+  float: left;
+  width: 85px;
+  height: 90vh;
+  min-height: 550px;
+}
+ul{
+  padding: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+ul li{
+  list-style: none;
+  height: 64px;
+  text-align: center;
+}
+ul img{
+  padding: 5px;
+}
+ul img:hover{
+  border: solid 2px #F7931E;
+  border-radius: 30px;
+}
+.photo{
+  float: left;
+  overflow: hidden;
+  width: 450px;
+  height: 90vh;
+  margin-right: 20px;
+  background-image: url("imgs/HYLion.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+h1{
+  width: 450px;
+  position: relative;
+  top: 72%;
+  padding-top: 10px;
+  background-color: rgba(63,61,66,0.75);
+  font-size: 50pt;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px #3F3D42;
+}
+article{
+  overflow: scroll;
+  height: 90vh;
+  margin-right: 20px;
+}
+section{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+section hr{
+  border-color: #939396;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+section h2{
+  color: white;
+}
+#about p{
+  color: #F7931E;
+  margin-left: 20px;
+}
+#edu div, #exp div{
+  width: 250px;
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+#edu div p, #exp div p{
+  margin: 5px;
+}
+#edu div p:nth-child(2n-1), #exp div p:nth-child(3n-2){
+  font-size: smaller;
+}
+#edu div p:first-child, #exp div p:first-child{
+  color: #F7931E;
+}
+#edu div p:nth-child(2), #exp div p:nth-child(2){
+  color: white;
+}
+#edu div p img, #exp div p img{
+  float: right;
+  opacity: 0.7;
+}
+#skill p img, #interest p img, #contact p img{
+  margin-left: 20px;
+  margin-right: 10px;
+}
+#lang div{
+  width: 100px;
+  text-align: center;
+}
